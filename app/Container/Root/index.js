@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import AppWithNavigationState from '../..//Navigation';
+import AppWithNavigationState from 'Navigation';
 import {StyleSheet, Text, View } from 'react-native';
 
 

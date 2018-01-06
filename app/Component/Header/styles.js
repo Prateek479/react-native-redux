@@ -1,7 +1,7 @@
 import { StyleSheet, Platform } from 'react-native';
-import colors from '../../Themes/colors';
-import { width } from '../../Themes/dimensions';
-import { isIos } from '../../Utils/platform';
+import colors from 'Themes/colors';
+import { width } from 'Themes/dimensions';
+import { isIos } from 'Utils/platform';
 
 export const styles = StyleSheet.create({
   header: {

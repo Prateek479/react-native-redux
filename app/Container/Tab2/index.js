@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import {StyleSheet, Text, View, Button } from 'react-native';
-import SimpleTabs from '../../Navigation/tabNavigation';
-import StyledView from '../../Component/StyledView';
-import Header from '../../Component/Header'
+import SimpleTabs from 'Navigation/tabNavigation';
+import StyledView from 'Component/StyledView';
+import Header from 'Component/Header'
 
 /**
  * Provides an entry point into our application.  

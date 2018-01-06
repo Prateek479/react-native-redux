@@ -3,7 +3,7 @@ import React from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { styles } from './styles';
-import StyledText from '../StyledText';
+import StyledText from 'Component/StyledText';
 
 const Header = ({
   hasHamburger,

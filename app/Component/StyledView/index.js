@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import Spinner from '../Spinner';
+import Spinner from 'Component/Spinner';
 import { styles, overlayStyle } from './styles';
 
 const propTypes = {

@@ -5,8 +5,8 @@
 import React from 'react';
 import { DrawerNavigator, SafeAreaView } from 'react-navigation';
 import SimpleTabs from './tabNavigation';
-import Home from '../Container/Home';
-import Login from '../Container/Login';
+import Home from 'Container/Home';
+import Login from 'Container/Login';
 
 const Drawer = DrawerNavigator(
   {

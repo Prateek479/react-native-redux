@@ -1,6 +1,6 @@
 import { StackNavigator } from 'react-navigation';
 import Drawer from './drawerNavigator';
-import Profile from '../Container/Profile';
+import Profile from 'Container/Profile';
 
 export const AppNavigator = StackNavigator({
   Drawer: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { styles } from './styles';
-import fontStyle from '../../Themes/fonts';
+import fontStyle from 'Themes/fonts';
 
 const propTypes = {
   //TODO: oneOfType is being used because in runtime style will be compiled

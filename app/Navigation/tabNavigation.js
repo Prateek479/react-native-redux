@@ -1,8 +1,8 @@
 import React from 'react';
 import { TabNavigator} from 'react-navigation';
 
-import Tab1 from '../Container/Tab1';
-import Tab2 from '../Container/Tab2';
+import Tab1 from 'Container/Tab1';
+import Tab2 from 'Container/Tab2';
 
 
 const SimpleTabs = TabNavigator({

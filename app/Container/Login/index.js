@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import {StyleSheet, Text, View, Button } from 'react-native';
-import StyledView from '../../Component/StyledView';
-import Header from '../../Component/Header'
+import StyledView from 'Component/StyledView';
+import Header from 'Component/Header'
 
 
 /**
