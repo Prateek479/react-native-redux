@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react';
 import {StyleSheet, Text, View, Button } from 'react-native';
 import SimpleTabs from '../../Navigation/tabNavigation';
+import StyledView from '../../Component/StyledView';
+import Header from '../../Component/Header'
+
 
 /**
  * Provides an entry point into our application.  
@@ -14,6 +17,7 @@ import SimpleTabs from '../../Navigation/tabNavigation';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    top:50,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -21,10 +25,13 @@ const styles = StyleSheet.create({
 });
 
 
- const Profile = () => {
+ const Profile = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <View>
+      <Header hasBack navigation={navigation} title={'Profile'} />
+      <StyledView style={styles.container}>
         <Text>Here is you Profile page </Text>
+      </StyledView>
     </View>
   );
 };

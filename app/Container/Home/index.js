@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import {StyleSheet, Text, View , Button} from 'react-native';
-
+import StyledView from '../../Component/StyledView';
+import Header from '../../Component/Header'
 
 /**
  * Provides an entry point into our application.  
@@ -13,7 +14,8 @@ import {StyleSheet, Text, View , Button} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
+    display:'flex',
+    flex: 1,
     top:50,
     backgroundColor: '#fff',
     alignItems: 'center',
@@ -22,10 +24,13 @@ const styles = StyleSheet.create({
 });
 
 
- const Home = () => {
+ const Home = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <View>
+      <Header hasHamburger hasSearch navigation={navigation} title={'Home'} />
+      <StyledView style={styles.container}>
         <Text>Here is you home page </Text>       
+      </StyledView>
     </View>
   );
 };

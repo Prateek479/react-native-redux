@@ -25,10 +25,7 @@ const styles = StyleSheet.create({
 
 
  const Root = () => {
-  return (
-    
-    <AppWithNavigationState />
-  );
+  return <AppWithNavigationState />;
 };
 
 
