@@ -25,20 +25,16 @@ const styles = StyleSheet.create({
 });
 
 
- const Tab1 = ({ navigation }) => {
+ const Profile = ({navigation}) => {
   return (
     <View>
-      <Header hasHamburger hasSearch navigation={navigation} title={'Tab A'} />
+      <Header hasHamburger navigation={navigation} title={'Profile'} />
       <StyledView style={styles.container}>
-        <Text>Here is you Tab 1 page </Text>
-        <Button
-            onPress={() => navigation.navigate('Login', { name: 'Jordan' })}
-            title="Open Login screen"
-        />
-      </StyledView>  
+        <Text>Here is you Profile page </Text>
+      </StyledView>
     </View>
   );
 };
 
 
-export default Tab1;
+export default Profile;

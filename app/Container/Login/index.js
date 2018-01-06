@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
  const Login = ({ navigation }) => {
   return (
     <View>
-      <Header hasClose navigation={navigation} title={'Login'} />
+      <Header hasBack navigation={navigation} title={'Login'} />
       <StyledView style={styles.container}>
         <Text>Here is you Login page </Text>
       </StyledView>  

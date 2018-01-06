@@ -6,7 +6,7 @@ import React from 'react';
 import { DrawerNavigator, SafeAreaView } from 'react-navigation';
 import SimpleTabs from './tabNavigation';
 import Home from 'Container/Home';
-import Login from 'Container/Login';
+import Profile from 'Container/Profile';
 
 const Drawer = DrawerNavigator(
   {
@@ -18,9 +18,9 @@ const Drawer = DrawerNavigator(
       path: '/tabs',
       screen: SimpleTabs
     },
-    Login: {
-      path: '/login',
-      screen: Login,
+    Profile: {
+      path: '/profile',
+      screen: Profile,
     },
   },
   {
