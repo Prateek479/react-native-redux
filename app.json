@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name":"Add Up Math",
+    "slug": "add-up-math",
+    "orientation":"portrait",
+    "icon":"https://www.shareicon.net/data/128x128/2015/09/25/107230_circle_512x512.png",
+    "sdkVersion": "23.0.0"
+  }
+}
