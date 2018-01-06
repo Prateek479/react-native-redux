@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import AppWithNavigationState from 'Navigation';
+import { Provider } from 'react-redux';
+import store from 'Store';
 import {StyleSheet, Text, View } from 'react-native';
 
 
@@ -25,7 +27,11 @@ const styles = StyleSheet.create({
 
 
  const Root = () => {
-  return <AppWithNavigationState />;
+  return (
+    <Provider store={store}>
+      <AppWithNavigationState />
+    </Provider>
+  );
 };
 
 
