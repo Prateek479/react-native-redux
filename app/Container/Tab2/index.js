@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
  const Tab2 = ({navigation}) => {
   return (
     <View>
-      <Header hasHamburger hasSearch navigation={navigation} title={'Profile'} />
+      <Header hasHamburger hasSearch navigation={navigation} title={'Tab B'} />
       <StyledView style={styles.container}>
         <Text>Here is you Tab 2 page </Text>
       </StyledView>
