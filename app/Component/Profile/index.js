@@ -17,7 +17,7 @@ import Header from 'Component/Header'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    top:50,
+    top:100,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -37,24 +37,20 @@ export default class Profile extends React.Component {
   }
   render() {
     const  {navigation, profile, isLoading} = this.props;
-    console.log(' profile', profile);
     return isLoading ? (
       <StyledView isLoading={true} />
     ) : (
       <View>
         <Header hasHamburger navigation={navigation} title={'Profile'} />
-        <StyledView style={styles.container}>
-          <Text>Here is you Profile page </Text>
           <StyledView style={styles.container}>
           {
             profile.results && profile.results.length > 0 ? 
-            profile.results.map((p)=>(
-              <Text>{p.name}</Text> 
+            profile.results.map((p, i)=>(
+              <Text key={i}>{p.name}</Text> 
             )): 
             <Text>Here not it is</Text> 
           }
           </StyledView>
-        </StyledView>
       </View>
     );
   }
