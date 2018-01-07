@@ -1,16 +1,32 @@
 {
-  "presets": ["babel-preset-expo"],
+  "presets": ["babel-preset-react-native-stage-0/decorator-support"],
   "env": {
     "development": {
       "plugins": [
-        "transform-react-jsx-source",
-        [
-          "module-resolver",
-          {
-            "root": ["./app"],
-            "extensions": [".js", ".ios.js", ".android.js"]
-          }
-        ]]
+        "transform-react-jsx-source"
+        ]
     }
-  }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./app"],
+        "alias": {
+          "$Component": "./app/Component",
+          "$Config": "./app/Config",
+          "$Actions": "./app/Actions",
+          "$Constants": "./app/Constants",
+          "$Reducer": "./app/Reducer",
+          "$Navigation": "./app/Navigation",
+          "$Sagas": "./app/Sagas",
+          "$Selectors": "./app/Selectors",
+          "$Store": "./app/Store",
+          "$Themes": "./app/Themes",
+          "$Utils": "./app/Utils",              
+          "$Container": "./app/Component",
+          "$Asstes": "./app/Assets",
+        }
+      }]
+  ]
 }

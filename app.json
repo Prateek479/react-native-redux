@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name":"Add Up Math",
-    "slug": "add-up-math",
+    "name":"RN Sagas",
+    "slug": "react-native-sagas",
     "orientation":"portrait",
-    "icon":"https://www.shareicon.net/data/128x128/2015/09/25/107230_circle_512x512.png",
+    "icon":"./app/Assets/logo.png",
     "sdkVersion": "23.0.0"
   }
 }
