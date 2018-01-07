@@ -1,38 +1,39 @@
-import React, { PropTypes } from 'react';
-import AppWithNavigationState from 'Navigation';
-import { Provider } from 'react-redux';
-import store from 'Store';
+import React, { Component } from 'react';
 import {StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import AppWithNavigationState from 'Navigation';
+import store from 'Store';
 
+import { getAsyncInjectors } from 'Utils/asyncInjectors';
+import profileReducer from 'Reducer/profile';
+import counterReducer from 'Reducer/counter';
 
+import profileSaga from 'Sagas/profile';
+// import authSaga from './containers/Auth/sagas';
 
+import config from 'Config';
+
+// Needed for redux-saga es6 generator support
 /**
- * Provides an entry point into our application.  
- *
+ * Provides an entry point into our application.  Bot
  * We create our Redux store here, put it into a provider and then bring in our
- * RootNative.
+ * RootContainer.
  *
  * We separate like this to play nice with React Native's hot reloading.
  */
 
-const styles = StyleSheet.create({
-  container: {
-    display:'flex',
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const { injectReducer, injectSagas } = getAsyncInjectors(store);
+injectReducer('profileReducer', profileReducer);
+injectSagas(profileSaga);
 
 
- const Root = () => {
-  return (
-    <Provider store={store}>
-      <AppWithNavigationState />
-    </Provider>
-  );
+export default class Root extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <AppWithNavigationState />
+      </Provider>
+    );
+  }
 };
 
-
-export default Root;

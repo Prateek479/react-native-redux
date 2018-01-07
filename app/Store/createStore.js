@@ -3,9 +3,12 @@
  */
 import { applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import reducer from 'Reducer'
+import { fromJS } from 'immutable';
+import createReducer from 'Reducer'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const sagaMiddleware = createSagaMiddleware();
+
 
 export default function configureStore(initialState = {}) {
   // Create the store with the middlewares
@@ -14,11 +17,13 @@ export default function configureStore(initialState = {}) {
   const middlewares = [sagaMiddleware];
 
   const store = createStore(
-    reducer,
-    applyMiddleware(...middlewares),
+    createReducer(),
+    fromJS(initialState),
+    composeWithDevTools(applyMiddleware(...middlewares)),
+
   );
 
-  // Extensions
+
   store.runSaga = sagaMiddleware.run;
   store.asyncReducers = {}; // Async reducer registry
 

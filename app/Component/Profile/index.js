@@ -25,16 +25,28 @@ const styles = StyleSheet.create({
 });
 
 
- const Profile = ({navigation}) => {
-  return (
-    <View>
-      <Header hasHamburger navigation={navigation} title={'Profile'} />
-      <StyledView style={styles.container}>
-        <Text>Here is you Profile page </Text>
-      </StyledView>
-    </View>
-  );
+
+export default class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { sort: 0, filterContainerPos: 0 };
+  }
+
+  componentWillMount() {
+    this.props.fetchProfile({'abc':'def'});
+  }
+  render() {
+    const  {navigation} = this.props;
+
+    return (
+      <View>
+        <Header hasHamburger navigation={navigation} title={'Profile'} />
+        <StyledView style={styles.container}>
+          <Text>Here is you Profile page </Text>
+        </StyledView>
+      </View>
+    );
+  }
 };
 
 
-export default Profile;
