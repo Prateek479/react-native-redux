@@ -14,7 +14,8 @@ const propTypes = {
 };
 //Always remember that the overlay for our spinner
 //should be the last view injected
-export const StyledView = props => (
+export const StyledView = (props) => {
+  return (
   <View style={[styles.container, props.style]} behavior="height">
     {props.children}
     {props.isLoading && (
@@ -23,8 +24,8 @@ export const StyledView = props => (
       </View>
     )}
   </View>
-);
-
+  );
+}
 StyledView.propTypes = propTypes;
 
 export default StyledView;

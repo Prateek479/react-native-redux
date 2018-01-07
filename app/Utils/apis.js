@@ -14,7 +14,7 @@ const endpointLocation = 'remote';
 
 const urls = {
   remote: {
-    'profile': 'people/1/',
+    'profile': 'people',
   },
   local: {},
 };

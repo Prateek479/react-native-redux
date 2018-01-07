@@ -36,9 +36,10 @@ export default class Profile extends React.Component {
     this.props.fetchProfile({'abc':'def'});
   }
   render() {
-    const  {navigation} = this.props;
-
-    return (
+    const  {navigation, profile, isLoading} = this.props;
+    return isLoading ? (
+      <StyledView isLoading={true} />
+    ) : (
       <View>
         <Header hasHamburger navigation={navigation} title={'Profile'} />
         <StyledView style={styles.container}>

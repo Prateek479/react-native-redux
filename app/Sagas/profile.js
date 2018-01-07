@@ -9,9 +9,12 @@ fetchProfileAction,
 
 // worker Saga: will be fired on PROFILE_FETCH_REQUESTED actions
 export function* fetchProfile({ shouldUpdate }) {
-    yield all([
-      call(callFetchProfile)    
-    ]);
+    const responseData = yield call(callFetchProfile);
+    yield put(
+      fetchProfileSucceededAction({
+        responseData: responseData,
+      }),
+    );
 }
 
 /*

@@ -23,7 +23,7 @@ import config from 'Config';
  */
 
 const { injectReducer, injectSagas } = getAsyncInjectors(store);
-injectReducer('profileReducer', profileReducer);
+injectReducer('profile', profileReducer);
 injectSagas(profileSaga);
 
 
