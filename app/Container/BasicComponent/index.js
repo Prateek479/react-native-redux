@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import {StyleSheet, Text, View , Button} from 'react-native';
 import StyledView from 'Component/StyledView';
 import Header from 'Component/Header'
+import ButtonComponent from 'Component/Button'
 
 /**
  * Provides an entry point into our application.  
@@ -18,24 +19,26 @@ const styles = StyleSheet.create({
     flex: 1,
     top:50,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
   },
 });
 const _onPress = () =>{
   console.log('i press')
 }
 
- const Home = ({navigation}) => {
+ const BasicComponent = ({navigation}) => {
   return (
     <View>
-      <Header hasHamburger hasSearch navigation={navigation} title={'Home'} />
+      <Header hasHamburger hasSearch navigation={navigation} title={'Components'} />
       <StyledView style={styles.container}>
-        <Text>Here is you home page </Text>  
+        <View >
+          <Text>Buttton Component </Text>  
+          <ButtonComponent title="Button Name" onPress={_onPress} />     
+        </View> 
       </StyledView>
     </View>
   );
 };
 
 
-export default Home;
+export default BasicComponent;
