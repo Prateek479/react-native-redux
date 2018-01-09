@@ -16,7 +16,6 @@ import Header from 'Component/Header'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    top:50,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
 
  const Tab2 = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Header hasHamburger hasSearch navigation={navigation} title={'Tab B'} />
       <StyledView style={styles.container}>
         <Text>Here is you Tab 2 page </Text>

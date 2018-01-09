@@ -1,4 +1,5 @@
 import colors from 'Themes/colors';
+import { Platform } from 'react-native';
 
 const sizeOptions = {
   fullWidth: {
@@ -54,7 +55,7 @@ export default {
     opacity: 0.5
   },
   text: (buttonSize, customColor) => ({
-    fontFamily:  'HelveticaNeue-Light',
+    fontFamily:  Platform.OS === 'ios' ? 'HelveticaNeue-Light': 'HelveticaNeueLight',
     fontSize: 10,
     color: colorOptions['primary'].text
   }),

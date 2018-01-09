@@ -14,25 +14,21 @@ import Header from 'Component/Header'
 
 const styles = StyleSheet.create({
   container: {
-    display:'flex',
     flex: 1,
-    top:50,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
-const _onPress = () =>{
-  console.log('i press')
-}
+
 
  const Home = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Header hasHamburger hasSearch navigation={navigation} title={'Home'} />
       <StyledView style={styles.container}>
-        <Text>Here is you home page </Text>  
-      </StyledView>
+        <Text>Here is you Home page </Text>
+      </StyledView>  
     </View>
   );
 };

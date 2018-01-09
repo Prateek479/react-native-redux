@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   container: {
     display:'flex',
     flex: 1,
-    top:50,
     backgroundColor: '#fff',
 
   },
@@ -28,7 +27,7 @@ const _onPress = () =>{
 
  const BasicComponent = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Header hasHamburger hasSearch navigation={navigation} title={'Components'} />
       <StyledView style={styles.container}>
         <View >

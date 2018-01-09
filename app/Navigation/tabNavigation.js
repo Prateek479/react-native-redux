@@ -18,6 +18,10 @@ const SimpleTabs = TabNavigator({
     initialRouteName: 'TabA',
     tabBarOptions: {
         activeTintColor: 'black',
+        inactiveBackgroundColor:'white',
+        style:{
+
+        }
     },
 });
   

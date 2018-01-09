@@ -4,8 +4,8 @@ import colors from './colors';
 export const fontFamily = {
   bold: Platform.OS === 'ios' ? 'HelveticaNeue-Bold' : 'HelveticaNeueBold',
   light: Platform.OS === 'ios' ? 'HelveticaNeue-Light' : 'HelveticaNeueLight',
-  medium:
-    Platform.OS === 'ios' ? 'HelveticaNeue-Medium' : 'HelveticaNeueMedium',
+  // medium:
+  //   Platform.OS === 'ios' ? 'HelveticaNeue-Medium' : 'HelveticaNeueMedium',
   regular: 'HelveticaNeue',
   thin: Platform.OS === 'ios' ? 'HelveticaNeue-Thin' : 'HelveticaNeueThin',
 };
